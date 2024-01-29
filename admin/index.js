@@ -86,7 +86,7 @@ addButton.onclick = function () {
   ) {
     axios({
       method: "POST",
-      url: "https://65aebe0f1dfbae409a757980.mockapi.io/phone",
+      url: "https://6597f7c2668d248edf23d046.mockapi.io/product",
       data: newPhone,
     })
       .then(function (response) {
@@ -111,7 +111,7 @@ addButton.onclick = function () {
 function getDataAPI() {
   axios({
     method: "GET",
-    url: "https://65aebe0f1dfbae409a757980.mockapi.io/phone",
+    url: "https://6597f7c2668d248edf23d046.mockapi.io/product",
   })
     .then(function (response) {
       arrPhoneAPI = response.data;
@@ -155,7 +155,7 @@ function hienThiDuLieu(data) {
 function DeletePhone(id) {
   axios({
     method: "DELETE",
-    url: `https://65aebe0f1dfbae409a757980.mockapi.io/phone/${id}`,
+    url: `https://6597f7c2668d248edf23d046.mockapi.io/product/${id}`,
   })
     .then(function (response) {
       getDataAPI();
@@ -199,7 +199,7 @@ document.getElementById("UpdatePhone").onclick = function () {
   ) {
     axios({
       method: "PUT",
-      url: `https://65aebe0f1dfbae409a757980.mockapi.io/phone/${idPhone}`,
+      url: `https://6597f7c2668d248edf23d046.mockapi.io/product/${idPhone}`,
       data: newPhone,
     })
       .then(function (response) {
@@ -208,14 +208,14 @@ document.getElementById("UpdatePhone").onclick = function () {
         reset();
         console.log(idPhone, "idphone sau khi update");
         console.log(
-          `URL: https://65aebe0f1dfbae409a757980.mockapi.io/phone/${idPhone}`
+          `URL: https://6597f7c2668d248edf23d046.mockapi.io/product/${idPhone}`
         );
         $("#exampleModal").modal("toggle");
       })
       .catch(function (err) {
         console.log("err Edit Data", err);
         console.log(
-          `URL: https://65aebe0f1dfbae409a757980.mockapi.io/phone/${idPhone}`
+          `URL: https://6597f7c2668d248edf23d046.mockapi.io/product/${idPhone}`
         );
       });
   } else {

@@ -36,9 +36,9 @@ const addDataToHTML = (productsToShow) => {
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
         </div>
-        <p class="product-screen">${product.screen}</p>
-        <p class="product-backCamera">${product.backCamera}</p>
-        <p class="product-frontCamera">${product.frontCamera}</p>
+        <p class="product-screen">Screen: ${product.screen}</p>
+        <p class="product-backCamera">Back Camera: ${product.backCamera}</p>
+        <p class="product-frontCamera">Front Camera: ${product.frontCamera}</p>
         <p class="product-desc">${product.desc}</p>
         <button class="add-to-cart" data-id="${product.id}"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
       `;
@@ -108,7 +108,7 @@ const addCartToHTML = () => {
       totalQuantity += item.quantity;
       let product = products.find((p) => p.id == item.product_id);
       if (product) {
-        totalPrice += product.price * item.quantity; // Cộng dồn giá tiền
+        totalPrice += product.price * item.quantity; 
 
         let newItem = document.createElement("div");
         newItem.classList.add("item");
@@ -134,7 +134,7 @@ const addCartToHTML = () => {
 
   const totalDiv = document.createElement("div");
   totalDiv.classList.add("total-price");
-  totalDiv.textContent = `Tổng Tiền: $${Math.round(totalPrice)}`; // Format số tiền với 2 chữ số thập phân
+  totalDiv.textContent = `Tổng Tiền: $${Math.round(totalPrice)}`; 
   listCartHTML.appendChild(totalDiv);
 
   iconCartSpan.innerText = totalQuantity;
